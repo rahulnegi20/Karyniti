@@ -1,0 +1,59 @@
+#header {
+    height: 50px;
+    background: #F88937;
+    color: #fff;
+    margin-top: 0%;
+    text-align: left;
+  }
+  
+  #branding h1 {
+    color: #fff;
+  }
+
+  a:link,
+  a:visited {
+    color:#F88937;
+  }
+  
+  div.breadcrumbs {
+    background: #8782D6;
+    color: #F88937;
+  }
+  
+  div.breadcrumbs a {
+    color: #333;
+  }
+  
+  .module h2, .module caption, .inline-group h2 {
+    background: #8782D6;
+  }
+  
+  .button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #F88937;
+    color: #fff;
+  } 
+
+@media only screen and (max-width: 1024px){
+
+#header {
+  padding: 0%;
+  height: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 767px){
+  #header{
+    margin-top: 0%;
+    padding: 0px;
+    height: 5%;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  #header{
+    margin-top: 0%;
+    padding: 0px;
+    height: 5%;
+  }
+}

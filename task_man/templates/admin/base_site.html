@@ -1,0 +1,12 @@
+
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+  <h1 id="header">
+    <img src="{% static 'images/KARYANITI.png' %}" alt="Karyaniti" height="50px" width="150px"  class="brand_img">
+  </h1>
+{% endblock %}
+{% block extrastyle %}
+  <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
