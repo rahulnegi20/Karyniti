@@ -33,6 +33,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^advanced_filters/', include('advanced_filters.urls')),
     url(r'^api/v1/', include(router.urls)),
+   # path('', include('templates.accounts'))
 ]
 
 admin.site.site_header = settings.SITE_HEADER
