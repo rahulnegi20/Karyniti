@@ -1,0 +1,89 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+<head>
+  
+	<title>Karyaniti</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  
+  <div class="cont">
+    <form action="{% url 'register' %}" method="POST">
+      {% csrf_token %}
+      <div class="form sign-in">
+        <h2>KARYANITI</h2>
+         <!-- Alerts -->
+    {% include 'partials/alerts.html' %}
+        <label for="username">
+          <span>Username</span>
+          <input type="text" name="username">
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password">
+        </label>
+        <button class="submit" value="login"  name="submit" type="submit">Sign In</button>
+        <p class="forgot-pass">Forgot Password ?</p>
+        <h3> Sign UP? <br> &#8594; </h3>
+      </div>
+    </form>
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>New here?</h2>
+          <p>Sign up and discover great amount of new opportunities!</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>One of us?</h2>
+          <p>If you already has an account, just sign in. We've missed you!</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Sign Up</span>
+          <span class="m-in">Sign In</span>
+        </div>
+      </div>
+      <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        <div class="form sign-up">
+          <h2>Sign Up</h2>
+       <!-- Alerts
+    {% include 'partials/alerts.html' %} -->
+          <label for="username">
+            <span>Userame</span>
+            <input type="text" name="username">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="email" name="email">
+          </label>
+          <label for="password">
+            <span>Password</span>
+            <input type="password" name="password">
+          </label>
+          <label for="password2">
+            <span>Confirm Password</span>
+            <input type="password" name="password2">
+          </label>
+      
+              <!-- Material checked 
+      <label class="form-check-label" for="materialChecked2" >
+        <input type="radio" class="form-check-input" id="materialChecked2" name="materialExample2" checked>
+          Admin? </label>
+-->
+
+              <button type="submit" value="register" name="submit" class="submit">Sign Up Now</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</body>
+</html>

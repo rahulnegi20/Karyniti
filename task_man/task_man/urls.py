@@ -29,10 +29,12 @@ router.register(r'tasks', TaskViewSet)
 
 
 urlpatterns = [
-    url(r'^$', lambda r: HttpResponseRedirect('admin/')),   # Remove this redirect if you add custom views
-    path('admin/', admin.site.urls),
+  #  url(r'^$', lambda r: HttpResponseRedirect('admin/')),  
+    
     url(r'^advanced_filters/', include('advanced_filters.urls')),
     url(r'^api/v1/', include(router.urls)),
+    path('', include('accounts.urls')),
+    path('admin/', admin.site.urls),
    # path('', include('templates.accounts'))
 ]
 
